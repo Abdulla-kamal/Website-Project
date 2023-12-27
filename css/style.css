@@ -51,10 +51,6 @@ input:focus {
   display: flex;
   align-items: center;
 }
-.main-page header .container h2 {
-  font-size: 1.4vw;
-
-}
 .main-page header .logo {
   width: 20px;
 }
@@ -66,7 +62,7 @@ input:focus {
   color: white;
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 20px;
   justify-content: right;
 }
 
@@ -80,10 +76,6 @@ input:focus {
     cursor: pointer;
     transition: .3s;
     opacity: .5;
-}
-
-.main-page header .title .icon {
-  font-size: 1.4vw;
 }
 
 .main-page header .title .icon i.active {
@@ -110,7 +102,6 @@ input:focus {
     font-weight: bold;
     border-radius: 6px;
     color: white;
-    font-size: 1.2vw;
 }
 .main-page .sections ul li.active {
    background-color: #1115143d;
@@ -178,10 +169,8 @@ input:focus {
     padding: 20px;
     border-radius: 6px;
     cursor: pointer;
-    transition: .3s;
-    font-size: 1.2vw;
-    height: 200px;
     height: fit-content;
+    transition: .3s;
 }
 
 .main-page .employees .box:hover {

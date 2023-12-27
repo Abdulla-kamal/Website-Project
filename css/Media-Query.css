@@ -1,5 +1,15 @@
 
 /* Start Container  */
+@media(max-width: 768px) {
+    .main-page header .title h2 {
+        font-size: 16px;
+    }
+    
+    .main-page .sections ul li {
+        font-size: 16px;
+    }
+
+}
 @media(min-width: 768px) {
     .container {
         width: 750px;
@@ -15,5 +25,20 @@
     .container {
         width: 100%;
     }
+}
+
+@media(max-width: 450px) {
+    .main-page header .title  {
+        gap:20px;
+    }
+
+    .main-page header .title h2 {
+        font-size: 9px;
+    }
+
+    .main-page .sections ul li {
+        font-size: 8px;
+    }
+
 }
 /* End Container  */
