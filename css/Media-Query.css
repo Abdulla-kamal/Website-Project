@@ -39,6 +39,11 @@
     .main-page .sections ul li {
         font-size: 8px;
     }
+    
+.main-page header .title .icon i {
+    width:30px;
+    height:30px;
+}
 
 }
 /* End Container  */
