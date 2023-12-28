@@ -12,6 +12,7 @@
 
 body {
 background-color: var(--background-color);
+overflow-x: hidden;
 }
 
 html {
@@ -35,6 +36,9 @@ input {
 }
 input:focus {
     outline: none;
+}
+h2 {
+  font-weight: bold;
 }
 /*  */
 /* Start Main Page  */
@@ -64,10 +68,46 @@ input:focus {
   align-items: center;
   gap: 20px;
   justify-content: right;
+  position: relative;
+}
+
+.main-page header .title .settings {
+  position: absolute;
+  height: 150px;
+  width: 100px;
+  top: 110px;
+  background-color: var(--secondry-color);
+  padding: 20px;
+  right: -40px;
+  border-radius: 6px;
+  right: -140px;
+  transition: .3s;
+}
+
+.main-page header .title .settings.open {
+  right: -40px;
+}
+.main-page header .title .settings .gaer-icon {
+position: absolute;
+padding: 10px;
+background-color:var(--secondry-color) ;
+left: -35px;
+top:50%;
+transform: translateY(-50%);
+cursor: pointer;
+}
+
+.main-page header .title .icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  
 }
 
 .main-page header .title .icon i {
-    background-color: var(--secondry-color);
     width: 40px;
     height: 40px;
     text-align: center;
@@ -76,6 +116,12 @@ input:focus {
     cursor: pointer;
     transition: .3s;
     opacity: .5;
+}
+.main-page header .title .icon i.fa-sun {
+  background-color: #EAB34D;
+}
+.main-page header .title .icon i.fa-moon {
+  background-color: #000;
 }
 
 .main-page header .title .icon i.active {

@@ -14,6 +14,14 @@ if(localStorage.getItem("--main-color")) {
 }
 
 // Start Header
+
+//Toggle Open Settings Class
+document.querySelector(".main-page header .title .settings .gaer-icon").addEventListener("click", _=> {
+  document.querySelector(".main-page header .title .settings").classList.toggle("open");
+  document.querySelector(".main-page header .title .settings .fa-gear").classList.toggle("fa-spin");
+})
+
+
 //Switch Between Dark Mood And Sun Mood
 document.querySelectorAll(".main-page header .icon i").forEach(i=> {
   i.addEventListener("click", function(e) {
