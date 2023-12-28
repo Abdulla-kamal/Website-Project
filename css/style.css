@@ -12,7 +12,6 @@
 
 body {
 background-color: var(--background-color);
-overflow-x: hidden;
 }
 
 html {
@@ -71,8 +70,8 @@ h2 {
   position: relative;
 }
 
-.main-page header .title .settings {
-  position: absolute;
+ .settings {
+  position: fixed;
   height: 150px;
   width: 100px;
   top: 110px;
@@ -80,24 +79,26 @@ h2 {
   padding: 20px;
   right: -40px;
   border-radius: 6px;
-  right: -140px;
+  right: -100px;
+  z-index: 1000;
   transition: .3s;
 }
 
-.main-page header .title .settings.open {
-  right: -40px;
+.settings.open {
+  right: 0px;
 }
-.main-page header .title .settings .gaer-icon {
+ .settings .gaer-icon {
 position: absolute;
 padding: 10px;
 background-color:var(--secondry-color) ;
 left: -35px;
 top:50%;
 transform: translateY(-50%);
+color: #fff;
 cursor: pointer;
 }
 
-.main-page header .title .icon {
+.settings .icon {
   width: 100%;
   height: 100%;
   display: flex;
@@ -107,7 +108,8 @@ cursor: pointer;
   
 }
 
-.main-page header .title .icon i {
+.settings .icon i {
+  color: white;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -117,14 +119,14 @@ cursor: pointer;
     transition: .3s;
     opacity: .5;
 }
-.main-page header .title .icon i.fa-sun {
+.settings .icon i.fa-sun {
   background-color: #EAB34D;
 }
-.main-page header .title .icon i.fa-moon {
+.settings .icon i.fa-moon {
   background-color: #000;
 }
 
-.main-page header .title .icon i.active {
+.settings .icon i.active {
   opacity: 1;
 }
 

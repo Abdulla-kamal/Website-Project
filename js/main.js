@@ -4,7 +4,7 @@ if(localStorage.getItem("--main-color")) {
   document.documentElement.style.setProperty("--secondry-color",localStorage.getItem("--secondry-color"));
   document.documentElement.style.setProperty("--background-color",localStorage.getItem("--background-color"));
   document.documentElement.style.setProperty("--white-color",localStorage.getItem("--white-color"));
-  document.querySelectorAll(".main-page header .icon i").forEach(i=> {
+  document.querySelectorAll(".settings .icon  i").forEach(i=> {
     i.classList.remove("active");
     if(i.dataset.maincolor === localStorage.getItem("--main-color")) {
       i.classList.add("active");
@@ -16,14 +16,14 @@ if(localStorage.getItem("--main-color")) {
 // Start Header
 
 //Toggle Open Settings Class
-document.querySelector(".main-page header .title .settings .gaer-icon").addEventListener("click", _=> {
-  document.querySelector(".main-page header .title .settings").classList.toggle("open");
-  document.querySelector(".main-page header .title .settings .fa-gear").classList.toggle("fa-spin");
+document.querySelector(" .settings .gaer-icon").addEventListener("click", _=> {
+  document.querySelector(".settings").classList.toggle("open");
+  document.querySelector(".settings .fa-gear").classList.toggle("fa-spin");
 })
 
 
 //Switch Between Dark Mood And Sun Mood
-document.querySelectorAll(".main-page header .icon i").forEach(i=> {
+document.querySelectorAll(".settings .icon i").forEach(i=> {
   i.addEventListener("click", function(e) {
 e.target.parentElement.querySelector(".active").classList.remove("active");
 e.target.classList.add("active");
