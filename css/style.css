@@ -3,6 +3,7 @@
     --secondry-color:#019A80;
     --background-color:#ddd;
     --white-color:#fff;
+    --text-color:#625f5f;
 }
 
 * {
@@ -70,7 +71,8 @@ h2 {
   position: relative;
 }
 
- .settings {
+/* Start Settings  */
+.settings {
   position: fixed;
   height: 150px;
   width: 100px;
@@ -80,22 +82,22 @@ h2 {
   right: -40px;
   border-radius: 6px;
   right: -100px;
-  z-index: 1000;
+  z-index: 100000;
   transition: .3s;
 }
 
 .settings.open {
   right: 0px;
 }
- .settings .gaer-icon {
-position: absolute;
-padding: 10px;
-background-color:var(--secondry-color) ;
-left: -35px;
-top:50%;
-transform: translateY(-50%);
-color: #fff;
-cursor: pointer;
+.settings .gaer-icon {
+  position: absolute;
+  padding: 10px;
+  background-color:var(--secondry-color) ;
+  left: -35px;
+  top:50%;
+  transform: translateY(-50%);
+  color: #fff;
+  cursor: pointer;
 }
 
 .settings .icon {
@@ -110,17 +112,17 @@ cursor: pointer;
 
 .settings .icon i {
   color: white;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
     transition: .3s;
     opacity: .5;
-}
-.settings .icon i.fa-sun {
-  background-color: #EAB34D;
+  }
+  .settings .icon i.fa-sun {
+    background-color: var(--main-color);
 }
 .settings .icon i.fa-moon {
   background-color: #000;
@@ -129,12 +131,13 @@ cursor: pointer;
 .settings .icon i.active {
   opacity: 1;
 }
+/* End Settings  */
 
 
 /* End Header  */
 /* Start Sections  */
 .main-page .sections {
-    background-color: var(--secondry-color);
+  background-color: var(--secondry-color);
 }
 .main-page .sections ul {
     width: 100%;
@@ -144,12 +147,18 @@ cursor: pointer;
 .main-page .sections ul li {
     flex: 1;
     text-align: center;
-    padding: 10px 0;
     transition: all .3s;
     cursor: pointer;
     font-weight: bold;
     border-radius: 6px;
     color: white;
+  }
+  .main-page .sections ul li a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 0;
+  text-decoration: none;
+  color: white;
 }
 .main-page .sections ul li.active {
    background-color: #1115143d;
@@ -217,7 +226,7 @@ cursor: pointer;
     padding: 20px;
     border-radius: 6px;
     cursor: pointer;
-    height: fit-content;
+    height: 150px;
     transition: .3s;
 }
 
@@ -231,4 +240,114 @@ cursor: pointer;
 }
 
 /* End Search Box  */
+/* Start About */
+.main-page .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  margin-top: 50px;
+}
+.main-page .about .image{
+ flex-basis: 40%;
+}
+.main-page .about .image img{
+ width: 100%;
+}
+.main-page .about .content{
+ flex-basis: 30%;
+ text-align: center;
+}
+
+.about .content p {
+  color: var(--text-color);
+  line-height: 1.8;
+  font-family: 'system-ui';
+  font-weight: 600;
+}
+.about .image img{
+  border-radius: 203px 50px 214px 0px / 109px 0px 95px 51px !important;
+}
+/* End About */
+
+/* Start Profile */
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000000a3;
+display: none;
+}
+
+.profile {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background-color: var(--secondry-color);
+  border-radius: 6px;
+  display: none;
+  z-index: 10000;
+}
+
+.close {
+  width: 5vb;
+  height: 5vb;
+  border-radius: 50%;
+  background-color: rgb(207, 4, 4);
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  cursor: pointer;
+}
+
+.close::before {
+  content: "";
+  width: 20px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.close::after {
+  content: "";
+  width: 20px;
+  height: 5px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.profile .info {
+  display: flex;
+  text-align: center;
+  padding: 20px;
+  color: var(--text-color);
+}
+
+.profile .info span {
+  flex: 1;
+}
+
+.profile .info span.name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.profile .content {
+ width: 90%;
+ background-color: var(--background-color);
+ margin: auto;
+ padding: 20px;
+ border-radius: 6px;
+}
+/* End Profile */
 /* End Main Page  */

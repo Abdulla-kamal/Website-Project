@@ -25,6 +25,20 @@
     .main-page .sections ul li {
         font-size: 16px;
     }
+    .main-page .about {
+        flex-direction: column;
+    }
+
+    .profile  {
+        padding: 0;
+    }
+    .profile .info{
+        padding: 20px 0px;
+    }
+    
+    .profile .info span {
+        font-size: 10px;
+    }
 
 }
 
