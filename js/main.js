@@ -107,9 +107,7 @@ fetch("../Employees.json")
   box.addEventListener("click", function(e){
     document.querySelector(".profile").style.display = "block";
     document.querySelector(".overlay").style.display = "block";
-    document.querySelector(".profile").querySelector(".id").innerHTML = `<strong>Id : </strong>${data[i].id}`
     document.querySelector(".profile").querySelector(".name").innerHTML =data[i].name;
-    document.querySelector(".profile").querySelector(".id").innerHTML = `<strong>Phone : </strong>${data[i].phone-num}`
   })
   })
 
