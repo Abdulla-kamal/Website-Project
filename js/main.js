@@ -99,17 +99,15 @@ try {
 }
 // Fech Employyes Data From Json File
 let boxes = document.querySelectorAll(".main-page .search .employees .box");
-fetch("../Employees.json")
-.then((res) => res.json())
-.then(data=> {
+const names = ["Abdulla Kamal", "Ali Younis", "Abdulrahman Almansoury", "Yousif Ibrahim", "Mustafa Muhammed"]
   boxes.forEach((box, i)=> {
-  box.querySelector("h3").innerHTML = data[i].name;
+    box.querySelector("h3").innerHTML = names[i];
   box.addEventListener("click", function(e){
     document.querySelector(".profile").style.display = "block";
     document.querySelector(".overlay").style.display = "block";
-    document.querySelector(".profile").querySelector(".name").innerHTML =data[i].name;
+    document.querySelector(".profile").querySelector(".name").innerHTML =names[i];
   })
-  })
+  
 
 })
 
