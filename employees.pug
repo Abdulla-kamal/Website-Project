@@ -1,0 +1,26 @@
+doctype
+html
+ head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  title Employees
+  //-Include Styles And Fonts
+  include includes-pug/styles.pug
+ body(dir = "rtl")
+  //-Include Settings Section
+  include includes-pug/settings.pug
+
+  //-Start Main Page
+  .main-page
+   //-Includ Header Section
+   include includes-pug/header
+   //-Start Sections Sections
+   .sections
+    .container
+     ul
+      li: a(href="index.html" target="_self") الصفحة الرئيسية
+      li: a(href="about.html" target="_self") ABOUT US
+      li(class = "active"): a(href="employees.html" target="_self") EMPLOYEES
+      li: a(href="contact.html" target="_self") CONTACT
+  //-Start Script Tag
+  script(src="js/main.js")
